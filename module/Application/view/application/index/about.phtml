@@ -1,0 +1,179 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle(' ' . $this->translate('GTFD'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/site.css')
+        
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <nav>
+        <div class="container"> 
+			<img class="logo" src="../images/logo.png" alt="GTFD" />
+		<img class="menu-icon" src="../images/menu-icon.png" alt="Click to expand menu" />
+			<ul class="nav-list"> 
+			 <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>	
+			
+                         <li class="active">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                            
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                        <li><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</a></li>
+                                    <li><a href="<?php echo $this->url('about/history') ?>">History</a></li>
+                                    <li><a href="<?php echo $this->url('about/vision') ?>">Vision</a></li>
+                                    <li><a href="<?php echo $this->url('about/goals') ?>">Goals</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+	
+			<ul class="social-list">
+				<li><a href="#"><img src="../images/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="#"><img src="../images/facebook.png" alt="Facebook" /></a></li>
+				<li><a href="#"><img src="../images/linkdin.png" alt="Linkdin" /></a></li>
+				<li><a href="#"><img src="../images/instagram.png" alt="Instagram" /></a></li>
+				<li><a href="#"><img src="../images/google.png" alt="Google+" /></a></li>
+			</ul>
+		</div>
+	</nav>
+	<header class="container">
+		<h1>Give a Teen a Future Dream</h1>
+		<h3>Making the sky your stepping stone and not your limit</h3>
+		<img src="images/about resized.jpg" alt="Staff Team" width="100%">
+		
+		<p id="about">"The sky is your stepping stone and the university your limit"
+"What counts in life is not the mere fact that we have lived. It is what difference we have made 
+to the lives of others that will determine the significance of the life we lead." - Nelson Mandela.
+This programme is aimed at changing a culture and mind set of students at a disadvantaged school. We wish to encourage students to dream beyond their current circumstances. 
+The program encompasses 5 main themes: education, environmental awareness, community engagement, a newsletter and leadership. Through the following themes we wish to develop a 
+skill set and mind-set that will help students in the future when they are expected to make it in the big world.
+</p>
+		
+		<div class="skills">
+		
+    	<div class="column-center">
+		<h4>Studying</h4>
+		<img src="images/book.png" alt="Staff Team" width="100px" height="100px">
+		<p>Increase in matric pass rate by offering a time, place and necessary means to study effectively and to reach their full potential.</p>
+		</div>
+		<div class="column-left">
+		<h4>Pass Rate</h4>
+		<img src="images/graduation_cap.png" alt="Staff Team" width="100px" height="100px">
+		<p>To increase a the matric pass rate by offering a time, place and necessary means to study effectively.</p>
+		</div>
+		<div class="column-right">
+		<h4>Varsity Application</h4>
+		<img src="images/Document.png" alt="Staff Team" width="100px" height="100px">
+		<p>The aim is to provide disadvantaged students at high school level to pursue their dreams and achieve their goals.</p>
+		</div>
+		<div style="clear:both;">
+		</div>
+		
+		<div class="banners">
+		<li><a href="History.html"><img src="images/History.jpg" class="banners1" alt="Staff Team" width="45%" ></a></li>
+		<li><a href="#"><img src="images/goals.jpg" class="banners2" alt="Staff Team"width="45%" ></a></li>
+		<li><a href="#"><img src="images/mission.jpg" class="banners3"alt="Staff Team" width="45%"></a></li>
+		<li><a href="#"><img src="images/vision.jpg" class="banners4"alt="Staff Team" width="45%"></a></li>
+		</div>
+		
+                </div>
+		
+	</header>
+	
+	
+	<body>
+		
+	</body>
+	<footer>
+		<div class="container ">
+			<div class="col-one-third">
+				<h3>From the Blog</h3>
+				<dl class="footer-list">
+				<dt>Lorem ipsum dolor sit</dt>
+				<dd>on March 10, 2014</dd>
+				<dt>Lorem ipsum dolor sit sit</dt>
+				<dd>on March 8, 2014</dd>
+				<dt>Lorem ipsum dolor sit sit sit</dt>
+				<dd>on March 3, 2014</dd>
+				</dl>
+			
+			</div>
+			<div class="col-one-third">
+				<h3>Contact Us</h3>
+				<address>7 Lentegeur Road<br/>
+				Mitchells Plain 
+				<br/>7785<br/><br/>
+				+27 81 598 1610<br/><br/>
+				<a href=""mailto:danyaal@gtfd.co.za>danyaal@gtfd.co.za</a>
+				</address>
+			</div>
+			<div class="col-one-third registration">
+				<h3>Memorable Moments</h3>
+				<div id="slideshow">
+   <div>
+     <img src="/images/GTFD/gtfd (89).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (54).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (62).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (23).jpg" width="200px" height="150px">
+   </div>
+</div>
+			 </div>
+			 <div style="clear:both;"></div>
+			</div><!-- Container -->
+			<span class="copyright">&copy;copyright 2014, GTFD</span>
+	 </footer>
+	 
+	 <script>
+		$(function() {
+			$nav = $('.nav-list');
+			
+			$('.menu-icon').click(function() {
+				$nav.slideToggle();			
+			});
+			
+			$(window).resize(function(){
+				if ($(window).width() >= 640){
+					$nav.show();
+				}else {
+					$nav.hide();
+				}
+			
+			});
+		});
+	 </script>
+         <script> $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);</script>
+	 
+	</body>
+</html>

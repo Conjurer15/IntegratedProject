@@ -1,0 +1,231 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('GTFD'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/site.css')
+        
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <nav>
+        <div class="container"> 
+			<img class="logo" src="../images/logo.png" alt="GTFD" />
+		<img class="menu-icon" src="../images/menu-icon.png" alt="Click to expand menu" />
+			<ul class="nav-list"> 
+			 <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>	
+			
+                         <li class="active">
+                                <a  href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                        <li><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</a></li>
+                                    <li class="active"><a href="<?php echo $this->url('about/history') ?>">History</a></li>
+                                    <li><a href="<?php echo $this->url('about/vision') ?>">Vision</a></li>
+                                    <li><a href="<?php echo $this->url('about/goals') ?>">Goals</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="<?php echo $this->url('resource') ?>"><?php echo $this->translate('Resources') ?></a></li>	
+                             <li><a href="<?php echo $this->url('events') ?>"><?php echo $this->translate('Events') ?></a></li>
+                              <li><a href="<?php echo $this->url('gallery') ?>"><?php echo $this->translate('Gallery') ?></a></li>
+                       <li><a href="<?php echo $this->url('register') ?>"><?php echo $this->translate('Register') ?></a></li>
+                        </ul>
+	
+			<ul class="social-list">
+				<li><a href="#" target="_blank"><img src="../images/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://www.facebook.com/GTFDProject?fref=ts" target="_blank"><img src="../images/facebook.png" alt="Facebook" /></a></li>
+				<li><a href="#"><img src="../images/linkdin.png" alt="Linkdin" /></a></li>
+				<li><a href="https://instagram.com/give_a_teen_a_future_dream/" target="_blank"><img src="../images/instagram.png" alt="Instagram" /></a></li>
+				<li><a href="#" target="_blank"><img src="../images/google.png" alt="Google+" /></a></li>
+			</ul>
+		</div>
+	</nav>
+	<header class="container">
+		<h1>Give a Teen a Future Dream</h1>
+		<h3>Making the sky your stepping stone and not your limit</h3>
+                <img class="about" src="../images/History.jpg" alt="Staff Team"  >
+		<h2 >How we got started</h2>
+		<p id="about">
+                    
+                    Give a Teen a Future Dream is a project undertaken by 6 Management students studying at Cape Peninsula 
+		University of Technology currently in their 2nd year of a 3 year Diploma in Business Management and Project Management.
+		Creating an opportunity to engage with the outside world and to be a part of the community and 
+		the social drive to reduce the influence of substance abuse, gang violence and to eventually reduce unemployment and
+		drop-out rates of high school graduates.</p>
+		
+		<!--<div class="skills">
+		
+    	<div class="column-center">
+		<h4>Studying</h4>
+		<img src="images/book.png" alt="Staff Team" width="100px" height="100px">
+		<p>the major outcomes of the project are to improve  overall academic results of grade 11 and 12</p>
+		</div>
+		<div class="column-left">
+		<h4>Pass Rate</h4>
+		<img src="images/graduation_cap.png" alt="Staff Team" width="100px" height="100px">
+		<p>To increase a the matric pass rate by offering a time, place and necessary means to study effectively.</p>
+		</div>
+		<div class="column-right">
+		<h4>Varsity Application</h4>
+		<img src="images/Document.png" alt="Staff Team" width="100px" height="100px">
+		<p>the aim is to provide disadvantaged students at high school level to pursue their dreams and achieve their goals.</p>
+		</div>
+		<div style="clear:both;">
+		</div>-->
+		
+		
+		
+		
+	</header>
+	
+	
+	<body>
+		
+	</body>
+	<!--<section class="feature">
+			<ul class="feature-list container">
+				<li class="feature-web">
+				<a href="#">
+					<img class="feature-icon" src="images/web.png" alt="Web Design">
+					<h3 class="feature-title"> WEB DESIGN</h3>
+				</a>
+				</li>
+				<li class="feature-graphic">
+				<a href="#">
+					<img class="feature-icon" src="images/graphic.png" alt="Graphic Design">
+					<h3 class="feature-title"> GRAPHIC DESIGN</h3>
+				
+				</a>
+				</li>
+			<li class="feature-video">
+				<a href="#">
+					<img class="feature-icon" src="images/video.png" alt="Video Production">
+					<h3 class="feature-title"> VIDEO PRODUCTION</h3>
+				</a>
+				</li>
+			</ul>
+	</section>
+	
+	<section class="portfolio-samples">
+	<div class="container">
+	<h2>Portfolio</h2>
+			<ul class="portfolio-list clearfix">
+				<li class="port-laptops">
+					<span class="caption">
+					<a href="#">lorem ipsum sit amet</a><img class="sample-icon" src="images/web-small.png" />
+					</span>
+				</li>
+				<li class="port-acme">
+					<span class="caption">
+					<a href="#">lorem ipsum sit amet</a><img class="sample-icon" src="images/graphic-small.png" />
+					</span>
+				</li>
+				<li class="port-demoreel">
+					<span class="caption">
+					<a href="#">lorem ipsum sit amet</a><img class="sample-icon" src="images/video-small.png" />
+					</span>
+				</li>
+				<li class="port-logo">
+					<span class="caption">
+					<a href="#">lorem ipsum sit amet</a><img class="sample-icon" src="images/graphic-small.png" /><
+					</span>
+				</li>				
+			</ul>
+	</div>
+	</section><!-- portfolio samples -->
+	<footer>
+		<div class="container ">
+			<div class="col-one-third">
+				<h3>About</h3>
+				<dl class="footer-list">
+                                    <dt><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/mission') ?>">Mission</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/vision') ?>">Vision</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/goals') ?>">Goals</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+                                
+				</dl>
+			
+			</div>
+			<div class="col-one-third">
+				<h3>Contact Us</h3>
+				<address>7 Lentegeur Road<br/>
+				Mitchells Plain 
+				<br/>7785<br/><br/>
+				+27 81 598 1610<br/><br/>
+				<a href=""mailto:danyaal@gtfd.co.za>danyaal@gtfd.co.za</a>
+				</address>
+			</div>
+			<div class="col-one-third registration">
+				<h3>Memorable Moments</h3>
+				<div id="slideshow">
+   <div>
+     <img src="/images/GTFD/gtfd (44).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (28).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (29).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (49).jpg" width="200px" height="150px">
+   </div>
+</div>
+			 </div>
+			 <div style="clear:both;"></div>
+			</div><!-- Container -->
+			<span class="copyright">&copy;copyright 2014, GTFD</span>
+	 </footer>
+	 
+	 <script>
+		$(function() {
+			$nav = $('.nav-list');
+			
+			$('.menu-icon').click(function() {
+				$nav.slideToggle();			
+			});
+			
+			$(window).resize(function(){
+				if ($(window).width() >= 640){
+					$nav.show();
+				}else {
+					$nav.hide();
+				}
+			
+			});
+		});
+	 </script>
+         <script> $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);</script>
+	 
+	</body>
+</html>

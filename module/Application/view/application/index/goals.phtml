@@ -1,0 +1,153 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('GTFD'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/site.css')
+        
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <nav>
+        <div class="container"> 
+			<img class="logo" src="../images/logo.png" alt="GTFD" />
+		<img class="menu-icon" src="../images/menu-icon.png" alt="Click to expand menu" />
+			<ul class="nav-list"> 
+			 <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>	
+			
+                         <li class="active">
+                                <a href="<?php echo $this->url('resource') ?>" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                        <li><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</a></li>
+                                    <li><a href="<?php echo $this->url('about/history') ?>">History</a></li>
+                                    <li><a href="<?php echo $this->url('about/vision') ?>">Vision</a></li>
+                                    <li class="active"><a href="<?php echo $this->url('about/goals') ?>">Goals</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="<?php echo $this->url('resource') ?>"><?php echo $this->translate('Resources') ?></a></li>	
+                             <li><a href="<?php echo $this->url('events') ?>"><?php echo $this->translate('Events') ?></a></li>
+                              <li><a href="<?php echo $this->url('gallery') ?>"><?php echo $this->translate('Gallery') ?></a></li>
+                        <li><a href="<?php echo $this->url('register') ?>"><?php echo $this->translate('Register') ?></a></li>
+                        </ul>
+	
+			<ul class="social-list">
+				<li><a href="#" target="_blank"><img src="../images/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://www.facebook.com/GTFDProject?fref=ts" target="_blank"><img src="../images/facebook.png" alt="Facebook" /></a></li>
+				<li><a href="#"><img src="../images/linkdin.png" alt="Linkdin" /></a></li>
+				<li><a href="https://instagram.com/give_a_teen_a_future_dream/" target="_blank"><img src="../images/instagram.png" alt="Instagram" /></a></li>
+				<li><a href="#" target="_blank"><img src="../images/google.png" alt="Google+" /></a></li>
+			</ul>
+		</div>
+	</nav>
+	<header class="container">
+            <h1>Give a Teen a Future Dream</h1>
+		<h3>Making the sky your stepping stone and not your limit</h3>
+		
+            <img class="about" src="../images/goals.jpg" alt="Goals">
+	<section class="goals">
+	<h2>What we are trying to achieve</h2>
+<span>Increase in matric pass rate by offering a time, place and necessary means to study effectively and to reach their full potential
+Creating an opportunity to engage with the outside world and to be a part of the community and the social drive to reduce the influence of substance abuse, gang violence and to eventually reduce unemployment and drop-out rates of high school graduates.
+	Improve overall academic results for Grade 11 & Grade 12
+	Create awareness concerning diversity issues such as Xenophobia, Racism, Cultural and religious differences. </span>
+
+	
+	</section>
+	</header>
+	
+	<footer>
+		<div class="container ">
+			<div class="col-one-third">
+				<h3>About</h3>
+				<dl class="footer-list">
+                                    <dt><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/mission') ?>">Mission</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/vision') ?>">Vision</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/goals') ?>">Goals</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+                                
+				</dl>
+			
+			</div>
+			<div class="col-one-third">
+				<h3>Contact Us</h3>
+				<address>7 Lentegeur Road<br/>
+				Mitchells Plain 
+				<br/>7785<br/><br/>
+				+27 81 598 1610<br/><br/>
+				<a href=""mailto:danyaal@gtfd.co.za>danyaal@gtfd.co.za</a>
+				</address>
+			</div>
+			<div class="col-one-third registration">
+				<h3>Memorable Moments</h3>
+				<div id="slideshow">
+   <div>
+     <img src="/images/GTFD/gtfd (32).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (43).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (75).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (15).jpg" width="200px" height="150px">
+   </div>
+</div>
+			 </div>
+			 <div style="clear:both;"></div>
+			</div><!-- Container -->
+			<span class="copyright">&copy;copyright 2014, GTFD</span>
+	 </footer>
+	 
+	 <script>
+		$(function() {
+			$nav = $('.nav-list');
+			
+			$('.menu-icon').click(function() {
+				$nav.slideToggle();			
+			});
+			
+			$(window).resize(function(){
+				if ($(window).width() >= 640){
+					$nav.show();
+				}else {
+					$nav.hide();
+				}
+			
+			});
+		});
+	 </script>
+	 <script> $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);</script>
+	</body>
+</html>

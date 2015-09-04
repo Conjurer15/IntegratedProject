@@ -1,0 +1,273 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('GTFD'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/site.css')
+        
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <nav>
+        <div class="container"> 
+			<img class="logo" src="../images/logo.png" alt="GTFD" />
+		<img class="menu-icon" src="../images/menu-icon.png" alt="Click to expand menu" />
+			<ul class="nav-list"> 
+			 <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>	
+			
+                         <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="<?php echo $this->url('about/history') ?>">History</a></li>
+                                    <li><a href="<?php echo $this->url('about/vision') ?>">Vision</a></li>
+                                    <li><a href="<?php echo $this->url('about/goals') ?>">Goals</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="<?php echo $this->url('resource') ?>"><?php echo $this->translate('Resources') ?></a></li>	
+                             <li class="active"><a href="<?php echo $this->url('events') ?>"><?php echo $this->translate('Events') ?></a></li>
+                              <li><a href="<?php echo $this->url('gallery') ?>"><?php echo $this->translate('Gallery') ?></a></li>
+                       <li><a href="<?php echo $this->url('register') ?>"><?php echo $this->translate('Register') ?></a></li>
+                        </ul>
+	
+			<ul class="social-list">
+				<li><a href="#" target="_blank"><img src="../images/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://www.facebook.com/GTFDProject?fref=ts" target="_blank"><img src="../images/facebook.png" alt="Facebook" /></a></li>
+				<li><a href="#"><img src="../images/linkdin.png" alt="Linkdin" /></a></li>
+				<li><a href="https://instagram.com/give_a_teen_a_future_dream/" target="_blank"><img src="../images/instagram.png" alt="Instagram" /></a></li>
+				<li><a href="#" target="_blank"><img src="../images/google.png" alt="Google+" /></a></li>
+			</ul>
+		</div>
+	</nav>
+        <header class="container">
+		<h1>Event Schedule</h1>
+		<h3>Keep in the loop with our schedule for students</h3>
+                <table width="80%" align="center" >
+    <div id="head_nav">
+    <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thrusday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+</div>  
+
+    <tr>
+        <th>08:00 - 09:00</th>
+        
+            <td>Class</td>
+            <td>Class</td>
+            <td >Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td title="No Class" class="Holiday">English</td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>10:00 - 11:00</td>
+        
+            <td>Break</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td>Break</td>
+            <td>Accounting</td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>12:00 - 13:00</td>
+        
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Afrikaans</td>
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>13:00 - 14:00</td>
+        
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Class</td>
+            <td>Civil Technology</td>
+
+        </div>
+    </tr>
+
+    <tr>
+        <th>14:00 - 15:00</td>
+        
+            <td>Afrikaans</td>
+            <td>Tourism</td>
+            <td>Life Science</td>
+            <td>Geography</td>
+            <td>Accounting</td>
+            <td>Physical Science</td>
+        </div>
+    </tr>
+     <th>15:00 - 16:00</td>
+        
+            <td>English</td>
+            <td>Accounting</td>
+            <td>Civil Technology</td>
+            <td>History</td>
+            <td>Geography</td>
+            <td>Life Science</td>
+        </div>
+    </tr>
+     <th>16:00 - 17:00</td>
+        
+            <td>Maths/Maths Lit</td>
+            <td>History</td>
+            <td>Physical Science</td>
+            <td> Life Science</td>
+            <td>Tourism</td>
+            <td>Maths/Maths Lit</td>
+        </div>
+    </tr>
+    
+           <div id="calendar">
+<p id="calendar-day"></p>
+<p id="calendar-date"></p>
+<p id="calendar-month-year"></p>
+
+</div> 
+    
+</table>
+                
+                	
+	
+
+
+	
+                
+	</header>
+
+	<footer>
+		<div class="container ">
+			<div class="col-one-third">
+				<h3>About</h3>
+				<dl class="footer-list">
+                                    <dt><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/mission') ?>">Mission</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/vision') ?>">Vision</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				<dt><a href="<?php echo $this->url('about/goals') ?>">Goals</dt></a>
+				<dd><!--on March 10, 2014--></dd>
+				</dl>
+			
+			</div>
+			<div class="col-one-third">
+				<h3>Contact Us</h3>
+				<address>7 Lentegeur Road<br/>
+				Mitchells Plain 
+				<br/>7785<br/><br/>
+				+27 81 598 1610<br/><br/>
+				<a href=""mailto:danyaal@gtfd.co.za>danyaal@gtfd.co.za</a>
+				</address>
+			</div>
+			<div class="col-one-third registration">
+						
+				<h3>Memorable Moments</h3>
+				<div id="slideshow">
+   <div>
+     <img src="/images/GTFD/gtfd (89).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (54).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (62).jpg" width="200px" height="150px">
+   </div>
+   <div>
+    <img src="/images/GTFD/gtfd (23).jpg" width="200px" height="150px">
+   </div>
+</div>
+			 </div>
+			 </div>
+			 <div style="clear:both;"></div>
+			</div><!-- Container -->
+			<span class="copyright">&copy;copyright 2014, GTFD</span>
+	 </footer>
+	 
+	 <script>
+		$(function() {
+			$nav = $('.nav-list');
+			
+			$('.menu-icon').click(function() {
+				$nav.slideToggle();			
+			});
+			
+			$(window).resize(function(){
+				if ($(window).width() >= 640){
+					$nav.show();
+				}else {
+					$nav.hide();
+				}
+			
+			});
+		});
+		
+		//this function will find today's date
+function calendar(){
+ var day=['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+ var month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+ var d=new Date();
+ setText('calendar-day', day[d.getDay()]);
+ setText('calendar-date', d.getDate());
+ setText('calendar-month-year', month[d.getMonth()]+' '+(1900+d.getYear()));
+};
+//this function will set the text value of tags
+function setText(id, val){
+ if(val < 10){
+ val = '0' + val; //add leading 0 if val < 10
+ }
+ document.getElementById(id).innerHTML = val;
+};
+//call calendar() when page load
+window.onload = calendar;
+	 </script>
+          <script> $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  3000);</script>
+	 
+	</body>
+</html>

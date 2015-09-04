@@ -1,0 +1,105 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('GTFD'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/css/site.css')
+        
+        ?>
+
+        <!-- Scripts -->
+
+    </head>
+    <body>
+        <nav>
+        <div class="container"> 
+			<img class="logo" src="../images/logo.png" alt="GTFD" />
+		<img class="menu-icon" src="../images/menu-icon.png" alt="Click to expand menu" />
+			<ul class="nav-list"> 
+			 <li ><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>	
+			
+                         <li class="dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                                    About <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                       <li><a href="<?php echo $this->url('about/ourstory') ?>">Our Story</a></li>
+                                    <li><a href="<?php echo $this->url('about/history') ?>">History</a></li>
+                                    <li><a href="<?php echo $this->url('about/vision') ?>">Vision</a></li>
+                                    <li><a href="<?php echo $this->url('about/goals') ?>">Goals</a></li>
+                                    <li><a href="<?php echo $this->url('about/mission') ?>">Mission</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="<?php echo $this->url('resource') ?>"><?php echo $this->translate('Resources') ?></a></li>	
+                             <li><a href="<?php echo $this->url('events') ?>"><?php echo $this->translate('Events') ?></a></li>
+                              <li><a href="<?php echo $this->url('gallery') ?>"><?php echo $this->translate('Gallery') ?></a></li>
+                              <li class="active"><a href="<?php echo $this->url('register') ?>"><?php echo $this->translate('Register') ?></a></li>
+                        </ul>
+	
+			<ul class="social-list">
+				<li><a href="#" target="_blank"><img src="../images/twitter.png" alt="Twitter" /></a></li>
+				<li><a href="https://www.facebook.com/GTFDProject?fref=ts" target="_blank"><img src="../images/facebook.png" alt="Facebook" /></a></li>
+				<li><a href="#"><img src="../images/linkdin.png" alt="Linkdin" /></a></li>
+				<li><a href="https://instagram.com/give_a_teen_a_future_dream/" target="_blank"><img src="../images/instagram.png" alt="Instagram" /></a></li>
+				<li><a href="#" target="_blank"><img src="../images/google.png" alt="Google+" /></a></li>
+			</ul>
+		</div>
+	</nav> 
+            </header>
+            <div class='c'></div>
+         <div class="home-wrapper">
+              
+<?php echo $this->escapeHtml($this->messages); ?>
+            
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('register', array('controller' => 'index', 'action' => 'login')));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo "<br/>";
+echo $this->formRow($form->get('usr_name'));
+echo "<br/>";
+echo $this->formRow($form->get('usr_password'));
+echo "<br/>";
+echo $this->formRow($form->get('rememberme'));
+echo "<br/>";
+echo $this->formSubmit($form->get('submit'));
+echo "<br/>";
+echo $this->form()->closeTag();
+?>
+<?php // view helper
+    if ($user = $this->identity()) {
+        echo 'Logged in as ' . $this->escapeHtml($user->usr_name);
+?>		
+ | <a href="<?php echo $this->url('application/default', array('controller' => 'index', 'action' => 'logout'));?>"><?php echo $this->translate('Logoutt'); ?></a> 
+<?php
+    } else {
+        echo 'Not logged in';
+    }
+?>
+<p>
+	<a href="<?php echo $this->url('application/default', array('controller' => 'registration', 'action' => 'register'));?>"><?php echo $this->translate('Register'); ?></a> |  
+	<a href="<?php echo $this->url('application/default', array('controller' => 'registration', 'action' => 'forgotten-password'));?>"><?php echo $this->translate('Forgotten Password'); ?></a>
+</p>
+         </div>
+<footer class="mainFooter">
+            <h2>Our Sponsors</h2>
+            <p>Copyright by <a href="#">Jonas Esethu</a> &COPY;2015.All rights reserved.</p>
+        </footer>
+</div>
+    </body>
+</html>
+
